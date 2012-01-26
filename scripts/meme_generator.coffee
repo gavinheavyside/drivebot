@@ -22,6 +22,13 @@ module.exports = (robot) ->
     memeGenerator msg, 2, 166088, "Y U NO", caption, (url) ->
       msg.send url
 
+  robot.respond /(.+) (Y U NO .+)/i, (msg) ->
+    title = msg.match[1] || ""
+    caption = msg.match[2] || ""
+
+    memeGenerator msg, 2, 166088, title, caption, (url) ->
+      msg.send url
+
   robot.respond /(I DON'?T ALWAYS .*) (BUT WHEN I DO,? .*)/i, (msg) ->
     memeGenerator msg, 74, 2485, msg.match[1], msg.match[2], (url) ->
       msg.send url
