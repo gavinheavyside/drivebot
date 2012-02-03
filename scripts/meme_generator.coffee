@@ -81,8 +81,12 @@ memeGenerator = (msg, generatorID, imageID, text0, text1, callback) ->
       if result? and result['instanceUrl']? and result['instanceImageUrl']?
         instanceURL = result['instanceUrl']
         img = result['instanceImageUrl'].replace /400x/, "500x"
-        msg.http(instanceURL).get() (err, res, body) ->
-          # Need to hit instanceURL so that image gets generated
-          callback "http://memegenerator.net#{img}"
+
+        pattern = ///
+        (\d+\.jpg)$
+        ///
+        filename = img.match(pattern)[1]
+
+        msg.send "http://images.memegenerator.net/instances/400x/#{filename}"
       else
         msg.reply "Sorry, I couldn't generate that image."
