@@ -5,4 +5,4 @@
 
 module.exports = (robot) ->
   robot.hear /ff+uu+/i, (msg) ->
-    msg.send "https://github.com/hgavin/drivebot/raw/master/images/rageface.png"
+    msg.send "https://github.com/gavinheavyside/drivebot/raw/master/images/rageface.png"

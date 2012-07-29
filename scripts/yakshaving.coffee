@@ -4,8 +4,8 @@
 #
 
 yaks = [
-  "https://github.com/hgavin/drivebot/raw/master/images/yak.jpg",
-  "https://github.com/hgavin/drivebot/raw/master/images/yak2.jpg"
+  "https://github.com/gavinheavyside/drivebot/raw/master/images/yak.jpg",
+  "https://github.com/gavinheavyside/drivebot/raw/master/images/yak2.jpg"
 ]
 
 module.exports = (robot) ->
