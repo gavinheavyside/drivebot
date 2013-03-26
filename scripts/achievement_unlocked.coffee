@@ -1,6 +1,15 @@
+# Description:
+#   achievement badge
 #
-# achievement unlocked <text> - achievement badge.
+# Dependencies:
+#   None
 #
+# Commands:
+#   drivebot achievement unlocked <text> - achievement badge.
+#
+# Author:
+#   gavinheavyside
+
 module.exports = (robot) ->
   robot.hear /achievement (get|unlock(ed)?) (.+?)(\s*[^@\s]+@[^@\s]+)?\s*$/i, (msg) ->
     caption = msg.match[3]
