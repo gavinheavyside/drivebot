@@ -1,6 +1,20 @@
-# ffffffffffuuuuuuuuuu
+# Description
+#   ffffffffffuuuuuuuuuu
 #
-# ffffuuuu - Show rage face
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   /ff+uu+/ - show rage face
+#
+# Notes:
+#   None
+#
+# Author:
+#   gavinheavyside
 #
 
 module.exports = (robot) ->

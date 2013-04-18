@@ -1,6 +1,20 @@
-# Bovine Shearing
+# Description
+#   Bovine Shearing
 #
-# yak shaving - Display a source of Yak hair
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   yak shaving - Display a source of Yak hair
+#
+# Notes:
+#   None
+#
+# Author:
+#   gavinheavyside
 #
 
 yaks = [
