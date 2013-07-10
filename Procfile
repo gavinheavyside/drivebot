@@ -1,1 +1,1 @@
-web: bin/hubot -a campfire -n DriveBot
+hubot: bin/hubot -a campfire -n DriveBot
