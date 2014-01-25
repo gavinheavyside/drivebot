@@ -1,5 +1,5 @@
 # Description:
-#   Integrates with memegenerator.net
+#   Integrates with MyDrive's meme generator
 #
 # Dependencies:
 #   None
