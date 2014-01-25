@@ -29,42 +29,62 @@ module.exports = (robot) ->
     robot.brain.data.memes = [
       {
         regex: /(.*) (ALL THE .*)/i,
+        top: 1,
+        bottom: 2,
         image: 'allthethings'
       },
       {
         regex: /((Oh|You) .*) ((Please|Tell) .*)/i,
+        top: 1,
+        bottom: 3,
         image: 'condescendingwonka'
       },
       {
         regex: /(Ermahgerd) (.*)/i,
+        top: 1,
+        bottom: 2,
         image: 'ermahgerd'
       },
       {
         regex: /(NOT SURE IF .*) (OR .*)/i,
+        top: 1,
+        bottom: 2,
         image: 'futuramafry'
       },
       {
         regex: /(I DON'?T ALWAYS .*) (BUT WHEN I DO,? .*)/i,
+        top: 1,
+        bottom: 2,
         image: 'mostinterestingman'
       },
       {
         regex: /(one does not simply) (.*)/i,
+        top: 1,
+        bottom: 2,
         image: 'onedoesnotsimply'
       },
       {
         regex: /(.*) (O\s?RLY\??.*)/i,
+        top: 1,
+        bottom: 2,
         image: 'orly'
       },
       {
         regex: /(.*) (SUCCESS|NAILED IT.*)/i,
+        top: 1,
+        bottom: 2,
         image: 'successkid'
       },
       {
         regex: /(YO DAWG .*) (SO .*)/i,
+        top: 1,
+        bottom: 2,
         image: 'xzibit'
       },
       {
         regex: /(Y U NO) (.+)/i,
+        top: 1,
+        bottom: 2,
         image: 'yunoguy'
       }
     ]
@@ -75,11 +95,7 @@ module.exports = (robot) ->
 
 memeResponder = (robot, meme) ->
   robot.respond meme.regex, (msg) ->
-    memeGenerator msg, meme.image, msg.match[1], msg.match[2], (url) ->
-      msg.send url
+    top = msg.match[meme.top].replace /\ /g, '_'
+    bottom = msg.match[meme.bottom].replace /\ /g, '_'
 
-memeGenerator = (msg, image, text0, text1, callback) ->
-  top = text0.replace /\ /g, '_'
-  bottom = text1.replace /\ /g, '_'
-  callback "http://mydrive-memes.herokuapp.com/#{top}/#{bottom}/#{image}.jpg"
-
+    msg.send "http://mydrive-memes.herokuapp.com/#{top}/#{bottom}/#{meme.image}.jpg"
