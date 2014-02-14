@@ -52,6 +52,12 @@ module.exports = (robot) ->
         image: 'futuramafry'
       },
       {
+        regex: /(.*) (WTF\?)/i,
+        top: 1,
+        bottom: 2,
+        image: 'koala'
+      },
+      {
         regex: /(I DON'?T ALWAYS .*) (BUT WHEN I DO,? .*)/i,
         top: 1,
         bottom: 2,
@@ -95,7 +101,7 @@ module.exports = (robot) ->
 
 memeResponder = (robot, meme) ->
   robot.respond meme.regex, (msg) ->
-    top = msg.match[meme.top].replace /\ /g, '_'
-    bottom = msg.match[meme.bottom].replace /\ /g, '_'
+    top = msg.match[meme.top].replace(/\ /g, '_').replace(/\?/g, '%3F')
+    bottom = msg.match[meme.bottom].replace(/\ /g, '_').replace(/\?/g, '%3F')
 
     msg.send "http://mydrive-memes.herokuapp.com/#{top}/#{bottom}/#{meme.image}.jpg"
