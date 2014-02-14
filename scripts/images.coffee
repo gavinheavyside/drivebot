@@ -20,6 +20,10 @@
 #   gavinheavyside
 #
 
+datas = [
+  "https://github.com/gavinheavyside/drivebot/raw/master/images/bigdata.png",
+  "https://github.com/gavinheavyside/drivebot/raw/master/images/bigdata2.png",
+]
 
 module.exports = (robot) ->
   robot.respond /chuck norris me/i, (msg) ->
@@ -32,6 +36,6 @@ module.exports = (robot) ->
     msg.send "https://github.com/gavinheavyside/drivebot/raw/master/images/rageface.png"
 
   robot.hear /big data/i, (msg) ->
-    msg.send "https://github.com/gavinheavyside/drivebot/raw/master/images/bigdata.png"
+    msg.send msg.random datas
 
 
