@@ -28,9 +28,9 @@ module.exports = (robot) ->
   unless robot.brain.data.memes?
     robot.brain.data.memes = [
       {
-        regex: /(.*) (ALL THE .*)/i,
-        top: 1,
-        bottom: 2,
+        regex: /(image me )?(.*) (ALL THE .*)/i,
+        top: 2,
+        bottom: 3,
         image: 'allthethings'
       },
       {
@@ -105,3 +105,4 @@ memeResponder = (robot, meme) ->
     bottom = msg.match[meme.bottom].replace(/\ /g, '_').replace(/\?/g, '%3F')
 
     msg.send "http://mydrive-memes.herokuapp.com/#{top}/#{bottom}/#{meme.image}.jpg"
+    msg.finish()
