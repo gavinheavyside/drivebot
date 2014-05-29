@@ -1,1 +1,1 @@
-hubot: bin/hubot -a campfire -n DriveBot
+web: bin/hubot --adapter slack --name DriveBot
