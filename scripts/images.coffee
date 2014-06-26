@@ -35,7 +35,6 @@ module.exports = (robot) ->
   robot.hear /ff+uu+/i, (msg) ->
     msg.send "https://github.com/gavinheavyside/drivebot/raw/master/images/rageface.png"
 
-  robot.hear /big data/i, (msg) ->
-    msg.send msg.random datas
-
+#  robot.hear /big data/i, (msg) ->
+#    msg.send msg.random datas
 
