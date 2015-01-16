@@ -38,4 +38,5 @@ module.exports = (robot) ->
   robot.hear /big data/i, (msg) ->
     msg.send msg.random datas
 
-
+  robot.respond /stop/i, (msg) ->
+    msg.send "https://github.com/gavinheavyside/drivebot/raw/master/images/hammertime.jpg"
