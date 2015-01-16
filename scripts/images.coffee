@@ -12,6 +12,7 @@
 #   borat me - display Borat thumbs up
 #   /ff+uu+/ - show rage face
 #   big data - show a big data
+#   stop     - show a hammertime
 #
 # Notes:
 #   None
@@ -38,4 +39,5 @@ module.exports = (robot) ->
   robot.hear /big data/i, (msg) ->
     msg.send msg.random datas
 
-
+  robot.respond /stop/i, (msg) ->
+    msg.send "https://github.com/gavinheavyside/drivebot/raw/master/images/hammertime.jpg"
