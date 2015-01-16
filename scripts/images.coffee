@@ -12,6 +12,7 @@
 #   borat me - display Borat thumbs up
 #   /ff+uu+/ - show rage face
 #   big data - show a big data
+#   stop     - show a hammertime
 #
 # Notes:
 #   None
